@@ -1,0 +1,249 @@
+@import "_imports";
+
+
+/*	COLOR
+	===== */
+
+/*	See-through mixin */
+
+@mixin see-through() {
+	background: -webkit-linear-gradient(transparent, transparent), url("../images/css/background.jpg") no-repeat;	
+	background-attachment: inherit, fixed;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+a {
+	/*link-colors($normal, $hover, $active, $visited, $focus)*/
+	@include link-colors($linkColor, $linkColorHoverFocus, $linkColorActive, $linkColorVisited, $linkColorHoverFocus);
+	text-decoration: none;
+	border-bottom: 1px solid $linkBorderColor;
+	padding-bottom: 0;
+	font-weight: 500;
+}
+a:hover {
+	color: #663309;
+}
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+h2 a:visited,
+h3 a:visited,
+h4 a:visited,
+h5 a:visited,
+h6 a:visited {
+	color: #000;
+}
+
+html {
+	background: url("../images/css/background.jpg") no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	box-shadow: inset 0 0 40px 40px rgba(0,0,0,.1);
+	-webkit-box-shadow: inset 0 0 40px 40px rgba(0,0,0,.1);
+	-moz-box-shadow: inset 0 0 40px 40px rgba(0,0,0,.1);	
+}
+
+/*
+body {
+	background: #F5F2ED;
+} */
+
+body {
+    background: #F5F2ED url("../images/css/background-2.jpg") no-repeat !important;
+}
+@media all and (min-width: $small) {
+	body {
+	    border: 4px solid #D4CDC1 !important;
+	}
+}
+
+
+.u-lHeader {
+}
+
+/*
+.u-lFooter {
+	background: #DEE0CC;
+}
+*/
+
+tbody { 
+	tr:nth-child(odd) {
+		background-color: #e7e7e7;
+	}
+	td,
+	th {
+	border: 1px solid #ccc;
+	}
+}
+
+/*
+@mixin placeholderStyles() {
+	color: #DEC9B6;
+	font-family: $sans-serif;
+	text-transform: lowercase;
+}
+
+::-webkit-input-placeholder {
+	@include placeholderStyles();
+}
+:-moz-placeholder {
+	@include placeholderStyles();
+}
+::-moz-placeholder {
+	@include placeholderStyles();
+}
+:-ms-input-placeholder {  
+	@include placeholderStyles();
+}
+*/
+
+
+/*	Bios
+	---- */
+
+.u-BioList__title {
+	color: #666;
+}
+
+
+
+/*	Footer
+	------ */
+
+.u-VCard__label {
+	color: #666;
+}
+
+/* Search */
+
+.u-Search__submit {
+ 	/*($normal, $hover, $active, $visited, $focus)*/
+	@include background-colors(#444, #333, #333, #444, #333);
+	@include link-colors(#fff, #ccc, #ccc, #fff, #ccc);
+}
+.u-Search__field {
+	color: #888C65;
+}
+@media all and (min-width: $tiny) {
+	.u-Search__field {
+		background: none;
+	}
+	.u-Search__submit,
+	.u-Search__submit:hover {
+		background: none;
+	}
+	.u-Search__submit:hover svg {
+		fill: #A88B71;
+	}
+	.u-Search__submit svg {
+		fill: #DEC9B6;
+	}
+}
+@media all and (min-width: $small) {
+	.u-Search {
+		background: #fff;
+		border: 2px solid #fff;
+	}
+}
+
+@media all and (min-width: $small) {
+
+	.u-lFooter {
+		position: relative;
+	}
+	.u-lFooter:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 40%;
+		right: 40%;
+		height: 1px;
+		border-top: 3px solid #888;
+		border-top: 3px solid rgba(0,0,0,.1);
+	}
+
+}
+
+
+/*	Navigation
+	---------- */
+
+.u-NavSite {
+    background: transparent;
+    border: none;
+}
+.u-NavSite__item,
+.u-NavSite__item:visited {
+    color: #523529;
+}
+.u-NavSite__item:hover {
+	color: #DE621F;
+	-webkit-text-fill-color: #DE621F;
+}
+
+@media all and (min-width: $small) {
+	.u-NavSite__item--isOpen .u-NavSite__item:link,
+	.u-NavSite__item--isOpen .u-NavSite__item:visited,
+	.u-NavSite__item--isCurrent:link,
+	.u-NavSite__item--isCurrent:visited {
+		color: #633625 !important;
+	}
+	.u-NavSite {
+		border-left: 4px solid #B27C30;
+		background: #F7EEE6;
+		background: #EDE9E1;
+		background: #F5F2ED;
+		background: none;
+		background: rgba(255,255,255,.5);
+		margin-left: -4px;
+	}
+}
+
+/*	Masthead
+	-------- */
+
+.u-Masthead__siteName--link {
+	@include see-through();
+}
+.u-Masthead__siteName--link:link,
+.u-Masthead__siteName--link:visited {
+	color: #DE621F;
+}
+.u-Masthead__siteName--link:hover {
+	color: #c00;
+}
+@media all and (min-width: $small) {
+	.u-Masthead__vassar--link:link,
+	.u-Masthead__vassar--link:visited {
+		color: #333;
+		color: rgba(0,0,0,.6)
+	}
+	.u-Masthead__vassar--link:hover {
+		color: #999;
+		color: rgba(0,0,0,.4)
+	}
+}
+
+/*	Modules
+	------- */
+
+.Module--sidebar {
+	.Module--contact .Module__listItem {
+		border: none;
+	}
+	.Module__listItem {
+		border-color: #dcd9d3;
+	}
+}
+.Module--sidebar .Module__headerLink,
+.Module--sidebar .Module__headerLink:visited {
+	color: #444;
+}
+
+
+
+
+

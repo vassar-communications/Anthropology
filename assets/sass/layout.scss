@@ -1,0 +1,228 @@
+@import "_imports";
+
+
+
+
+/* The padding on u-lHeader, u-lMain, u-lFooter, and u-NavSite. */
+
+$layoutContainerPadding--tiny: 4%;
+$layoutContainerPadding--medium: 3%;
+
+
+
+/*	LAYOUT
+	====== */
+
+@media screen {
+
+	.u-lFooter {
+		clear: both;
+	}
+	.u-Container {
+		position: relative;
+	}
+	.u-lHeader {
+		padding: 4%;
+	}
+	.u-lFooter {
+		padding: 4rem $layoutContainerPadding--medium;
+	}
+	.galleria--content {
+		margin: 0 0 2.5%;
+	}
+	.u-lContent,
+	.u-lAside {
+		padding: 4%;
+	}
+	.u-List--site,
+	.u-VCard__info {
+		margin: 0;
+		padding: 0;
+	}
+	.u-VCard__info,
+	.u-List--site {
+		position: relative;
+		margin-top: 0;
+		padding-top: .25em;
+	}
+	
+	.u-VCard__item.u-VCard__org {
+		font-weight: bold;
+		font-size: 1em;
+		margin-bottom: .5em;
+		display: block;
+	}
+
+	.u-Masthead__siteName {
+		margin-top: 2.4em;
+	}
+}
+
+/*	SMALL
+	----- */
+
+@media all and (min-width: $small) {
+	.u-lMain {
+		width: 70%;
+		float: right;
+		padding: $layoutContainerPadding--medium;
+	}
+	.u-NavSite {
+		width: 30%;
+		float: left;
+	}
+/*	.u-lMain,
+	.u-NavSite { */
+	
+	.u-lMain {
+		padding-top: 0;
+	}
+	.u-NavSite__level {
+		margin-top: .2em;
+	}
+	.u-lFooter {
+		padding: 2rem $layoutContainerPadding--medium;
+	}
+	.u-lHeader {
+		padding-top: 2rem;
+		padding: $layoutContainerPadding--medium $layoutContainerPadding--medium 5% $layoutContainerPadding--medium;
+		position: relative;
+	}
+	.u-Masthead__siteName {
+		margin-top: 4rem;
+	}
+	.u-lContent,
+	.u-lAside {
+		padding: 0;
+	}
+	.u-Search {
+		width: 16em;
+		position: absolute;
+		right: auto;
+		top: 1rem;
+		left: $layoutContainerPadding--medium;
+	}
+	
+	/*	Modules
+		------- */
+	
+	.Module--sidebar.Module--contact {
+		.Module__listItem {
+			padding: 0;
+		}
+		.Module__name {
+			margin-bottom: 0;
+			border: none;
+			padding-bottom: .25em;
+			margin-top: .5em;
+		}
+	}
+}
+
+/*	MEDIUM
+	------ */
+
+@media all and (min-width: $medium) {
+	html {
+		padding: 2%;
+	}
+	.u-lMain {
+		width: 74%;
+		padding-right: 7%;
+	}
+	.u-NavSite {
+		width: 26%;
+		/* padding-top: 0; */
+	}
+	.u-Search {
+		width: 20.5%;
+	}
+}
+
+/*	LARGE
+	----- */
+
+@media all and (min-width: $large) {
+	body {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.u-lMain {
+		width: 80%;
+		padding-right: $layoutContainerPadding--medium;
+	}
+	.u-NavSite {
+		width: 20%;
+	}
+	.u-lAside {
+		padding: 0;
+		padding-left: 2%;
+		width: 30%;
+		float: right;
+	}
+	.u-lContent {
+		padding: 0;
+		padding-right: 2%;
+		width: 70%;
+		float: left;
+	}
+	.u-biosInner .u-lMain {
+		width: 75%;
+	}
+	.u-biosInner .u-NavSite {
+		width: 25%;
+	}
+}
+
+@media all and (min-width: $pointAtWhichSearchMovesToRight) {
+	.u-Masthead__siteName {
+		margin-top: 0;
+	}
+	.u-Search {
+		left: auto;
+		right: 3%;
+		top: 2.8em;
+	}
+}
+
+
+.u-NavSite__level--2 .u-NavSite__item {
+	padding: .1em 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

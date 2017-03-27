@@ -1,0 +1,315 @@
+/*	CONFIG
+	====== */
+/*	TYPOGRAPHY
+	========== */
+/*	LAYOUT
+	====== */
+/* Site breakpoints */
+/* COLOR
+	====== */
+/* Basic link colors - these colors also affect the Google Search result link colors */
+/* MODULES
+	======== */
+/* Bios */
+/* Breadcrumbs  */
+/* Footer */
+/* Images */
+/*	Google search results  */
+/* Currently being overridden by something in Google's default CSS */
+/* The numbers that represent pages of search results */
+/* Nav */
+/* level 3 covers Level 3 and up. */
+/* News  */
+/* Use these variables to place a bg color on news items */
+/* Not sure all these color settings are necessary
+$u-ArticleListItem__label--type--color:;
+$u-ArticleListItem__label--dateline__posted--color:;
+$u-ArticleListItem__label--dateline__postedDate--color:f; */
+/*	Search
+	------ */
+/*	Up until this point, the search box will be positioned
+	over the masthead, so as not to overlap it. This point
+	depends on how wide the site masthead is. Keep increasing it
+	until the search box no longer overlaps the masthead.
+*/
+/*	Mobile search colors
+	-------------------- */
+/*	Mobile menu colors
+	------------------ */
+/* $MenuBtnColor--activated: #000; */
+/*	Mobile search and menu colors
+	----------------------------- */
+/* The background color of a button, when activated */
+/*	Mobile search colors
+	-------------------- */
+/* The background of the "Vassar College" area */
+/* The background of the search and menu buttons */
+/* The color of the search icon and Menu text */
+/* The color of the space between search and menu */
+/* Don't modify these */
+.myDIV,
+body > p {
+  display: none;
+}
+
+/*	COLOR
+	===== */
+/*	See-through mixin */
+a {
+  /*link-colors($normal, $hover, $active, $visited, $focus)*/
+  color: #DE621F;
+  text-decoration: none;
+  border-bottom: 1px solid #f2bfa4;
+  padding-bottom: 0;
+  font-weight: 500;
+}
+a:visited {
+  color: #8A7265;
+}
+a:focus {
+  color: #cc0000;
+}
+a:hover {
+  color: #cc0000;
+}
+a:active {
+  color: #ED6707;
+}
+
+a:hover {
+  color: #663309;
+}
+
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+h2 a:visited,
+h3 a:visited,
+h4 a:visited,
+h5 a:visited,
+h6 a:visited {
+  color: #000;
+}
+
+html {
+  background: url("../images/css/background.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 40px 40px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 40px 40px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 0 40px 40px rgba(0, 0, 0, 0.1);
+}
+
+/*
+body {
+	background: #F5F2ED;
+} */
+body {
+  background: #F5F2ED url("../images/css/background-2.jpg") no-repeat !important;
+}
+
+@media all and (min-width: 600px) {
+  body {
+    border: 4px solid #D4CDC1 !important;
+  }
+}
+/*
+.u-lFooter {
+	background: #DEE0CC;
+}
+*/
+tbody tr:nth-child(odd) {
+  background-color: #e7e7e7;
+}
+tbody td,
+tbody th {
+  border: 1px solid #ccc;
+}
+
+/*
+@mixin placeholderStyles() {
+	color: #DEC9B6;
+	font-family: $sans-serif;
+	text-transform: lowercase;
+}
+
+::-webkit-input-placeholder {
+	@include placeholderStyles();
+}
+:-moz-placeholder {
+	@include placeholderStyles();
+}
+::-moz-placeholder {
+	@include placeholderStyles();
+}
+:-ms-input-placeholder {  
+	@include placeholderStyles();
+}
+*/
+/*	Bios
+	---- */
+.u-BioList__title {
+  color: #666;
+}
+
+/*	Footer
+	------ */
+.u-VCard__label {
+  color: #666;
+}
+
+/* Search */
+.u-Search__submit {
+  /*($normal, $hover, $active, $visited, $focus)*/
+  background: #444;
+  color: #fff;
+}
+.u-Search__submit:visited {
+  background: #444;
+}
+.u-Search__submit:focus {
+  background: #333;
+}
+.u-Search__submit:hover {
+  background: #333;
+}
+.u-Search__submit:active {
+  background: #333;
+}
+.u-Search__submit:visited {
+  color: #fff;
+}
+.u-Search__submit:focus {
+  color: #ccc;
+}
+.u-Search__submit:hover {
+  color: #ccc;
+}
+.u-Search__submit:active {
+  color: #ccc;
+}
+
+.u-Search__field {
+  color: #888C65;
+}
+
+@media all and (min-width: 400px) {
+  .u-Search__field {
+    background: none;
+  }
+
+  .u-Search__submit,
+  .u-Search__submit:hover {
+    background: none;
+  }
+
+  .u-Search__submit:hover svg {
+    fill: #A88B71;
+  }
+
+  .u-Search__submit svg {
+    fill: #DEC9B6;
+  }
+}
+@media all and (min-width: 600px) {
+  .u-Search {
+    background: #fff;
+    border: 2px solid #fff;
+  }
+}
+@media all and (min-width: 600px) {
+  .u-lFooter {
+    position: relative;
+  }
+
+  .u-lFooter:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 40%;
+    right: 40%;
+    height: 1px;
+    border-top: 3px solid #888;
+    border-top: 3px solid rgba(0, 0, 0, 0.1);
+  }
+}
+/*	Navigation
+	---------- */
+.u-NavSite {
+  background: transparent;
+  border: none;
+}
+
+.u-NavSite__item,
+.u-NavSite__item:visited {
+  color: #523529;
+}
+
+.u-NavSite__item:hover {
+  color: #DE621F;
+  -webkit-text-fill-color: #DE621F;
+}
+
+@media all and (min-width: 600px) {
+  .u-NavSite__item--isOpen .u-NavSite__item:link,
+  .u-NavSite__item--isOpen .u-NavSite__item:visited,
+  .u-NavSite__item--isCurrent:link,
+  .u-NavSite__item--isCurrent:visited {
+    color: #633625 !important;
+  }
+
+  .u-NavSite {
+    border-left: 4px solid #B27C30;
+    background: #F7EEE6;
+    background: #EDE9E1;
+    background: #F5F2ED;
+    background: none;
+    background: rgba(255, 255, 255, 0.5);
+    margin-left: -4px;
+  }
+}
+/*	Masthead
+	-------- */
+.u-Masthead__siteName--link {
+  background: -webkit-linear-gradient(transparent, transparent), url("../images/css/background.jpg") no-repeat;
+  background-attachment: inherit, fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.u-Masthead__siteName--link:link,
+.u-Masthead__siteName--link:visited {
+  color: #DE621F;
+}
+
+.u-Masthead__siteName--link:hover {
+  color: #c00;
+}
+
+@media all and (min-width: 600px) {
+  .u-Masthead__vassar--link:link,
+  .u-Masthead__vassar--link:visited {
+    color: #333;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .u-Masthead__vassar--link:hover {
+    color: #999;
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+/*	Modules
+	------- */
+.Module--sidebar .Module--contact .Module__listItem {
+  border: none;
+}
+.Module--sidebar .Module__listItem {
+  border-color: #dcd9d3;
+}
+
+.Module--sidebar .Module__headerLink,
+.Module--sidebar .Module__headerLink:visited {
+  color: #444;
+}
