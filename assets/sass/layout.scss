@@ -56,12 +56,23 @@ $layoutContainerPadding--medium: 3%;
 	.u-Masthead__siteName {
 		margin-top: 2.4em;
 	}
+    
+    .gf- .u-Masthead__siteName
+    {
+        margin-top: .85em;
+    }
 }
 
 /*	SMALL
 	----- */
 
 @media all and (min-width: $small) {
+    
+    .gf- .u-Masthead__siteName
+    {
+        margin-top: 0;
+    }
+
 	.u-lMain {
 		width: 70%;
 		float: right;
@@ -126,6 +137,12 @@ $layoutContainerPadding--medium: 3%;
 	html {
 		padding: 2%;
 	}
+    
+    .gf- .PageContent
+    {
+        margin: 2%;
+    }
+
 	.u-lMain {
 		width: 74%;
 		padding-right: 7%;
@@ -147,7 +164,12 @@ $layoutContainerPadding--medium: 3%;
 		max-width: 1200px;
 		margin: 0 auto;
 	}
-	.u-lMain {
+	
+    .gf- .PageContent {
+		max-width: 1200px;
+	}
+	
+    .u-lMain {
 		width: 80%;
 		padding-right: $layoutContainerPadding--medium;
 	}
@@ -190,39 +212,11 @@ $layoutContainerPadding--medium: 3%;
 	padding: .1em 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (min-width: 79em)
+{
+    .gf- .PageContent
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

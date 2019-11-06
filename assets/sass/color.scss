@@ -45,29 +45,36 @@ html {
 	-moz-box-shadow: inset 0 0 40px 40px rgba(0,0,0,.1);	
 }
 
-/*
-body {
-	background: #F5F2ED;
-} */
-
 body {
     background: #F5F2ED url("../images/css/background-2.jpg") no-repeat !important;
 }
+
+.gf- body {
+    background: none !important;
+}
+
+.gf- .PageContent {
+    background: #F5F2ED url("../images/css/background-2.jpg") 0 -3.75em no-repeat !important;
+}
+
 @media all and (min-width: $small) {
 	body {
 	    border: 4px solid #D4CDC1 !important;
 	}
-}
+    
+    .gf- body {
+	    border: 0 !important;
+	}
 
+    .gf- .PageContent {
+	    border: 4px solid #D4CDC1 !important;
+	}
+    
+    .gf- .PageContent {
+        background-position: 0 0 !important;
+    }
 
-.u-lHeader {
 }
-
-/*
-.u-lFooter {
-	background: #DEE0CC;
-}
-*/
 
 tbody { 
 	tr:nth-child(odd) {
